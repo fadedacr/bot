@@ -7,7 +7,9 @@ const client = new Discord.Client();
 client.on('ready', () => {
 
     console.log('I am ready!');
-    client.user.setActivity("hunting down molson's hairline"); 
+    //client.user.setActivity("hunting down molson's hairline"); 
+    client.user.setActivity('hunting down molsons hairline', { type: 'PLAYING' });
+    //client.user.setActivity;
 
 });
 
