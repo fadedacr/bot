@@ -16,7 +16,7 @@ client.on('ready', () => {
 client.on('message', message => {
 
     if (message.content === 'ping') {
-
+       console.log('yes!');
        message.reply('pong');
 
        }
