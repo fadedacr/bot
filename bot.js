@@ -21,7 +21,7 @@ function update(){
   console.log("yes!!!!!!!!!!!!!!!!")
 }
 
-window.setInterval(update, 5000);
+setInterval(update, 5000);
 
 client.on('message', message => {
 
