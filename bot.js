@@ -21,16 +21,20 @@ function updatename(){
   client.user.setActivity('Re-Imagined Networks', { type: 'STREAMING' })
   .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
   .catch(console.error);
-}
-
-function updateplayers(){
+  await sleep(3000)
   client.user.setActivity('21 Players Online', { type: 'STREAMING' })
   .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
   .catch(console.error);
 }
 
+//function updateplayers(){
+//  client.user.setActivity('21 Players Online', { type: 'STREAMING' })
+//  .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
+//  .catch(console.error);
+//}
+
 setInterval(updatename, 5000);
-setInterval(updateplayers, 2500);
+//setInterval(updateplayers, 2500);
 
 client.on('message', message => {
 
