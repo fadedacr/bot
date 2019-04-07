@@ -1,7 +1,23 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const rp = require('request-promise');
+const cheerio = require('cheerio');
 
- 
+const options = {
+  uri: `https://www.gametracker.com/server_info/45.76.63.38:27015/`,
+  transform: function (body) {
+    return cheerio.load(body);
+  }
+}; 
+
+rp(options)
+  .then(($) => {
+    console.log($);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
 
 client.on('ready', () => {
 
