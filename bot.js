@@ -17,7 +17,9 @@ client.on('ready', () => {
 
 });
 
- 
+while (condition) {
+  console.log("yes!!!!!!!!!!!!!!!!")
+}
 
 client.on('message', message => {
 
