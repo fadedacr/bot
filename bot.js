@@ -17,13 +17,13 @@ client.on('ready', () => {
 });
 
 function updatename(){
-  client.user.setActivity('Re-Imagined Networks', { type: 'STREAMING' })
+  client.user.setActivity('Re-Imagined Networks', { url: 'https://www.twitch.tv/urmom' }, { type: 'STREAMING' })
   .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
   .catch(console.error);
 }
 
 function updateplayers(){
-  client.user.setActivity('21 Players Online', { type: 'STREAMING' })
+  client.user.setActivity('21 Players Online', { url: 'https://www.twitch.tv/urmom' }, { type: 'STREAMING' })
   .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
   .catch(console.error);
 }
