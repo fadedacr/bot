@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-
 const client = new Discord.Client();
 
  
@@ -29,8 +28,8 @@ function updateplayers(){
   .catch(console.error);
 }
 
-setInterval(updatename, 5000);
-setInterval(updateplayers, 2300);
+setInterval(updatename, 10000);
+setInterval(updateplayers, 4600);
 
 client.on('message', message => {
 
