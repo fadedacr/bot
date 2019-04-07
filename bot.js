@@ -22,10 +22,9 @@ client.on('ready', () => {
 client.on('message', message => {
 
     if (message.content === 'ping') {
-       console.log('yes!');
-     client.user.setActivity("nou", {type: 'WATCHING'});
        message.reply('pong');
-
+     client.user.setActivity("nou", {type: 'WATCHING'});
+       console.log('yes!');
        }
 
 });
