@@ -17,9 +17,11 @@ client.on('ready', () => {
 
 });
 
-while (condition) {
+function update(){
   console.log("yes!!!!!!!!!!!!!!!!")
 }
+
+window.setInterval(update, 5000);
 
 client.on('message', message => {
 
