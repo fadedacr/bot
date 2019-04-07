@@ -23,7 +23,7 @@ client.on('message', message => {
 
     if (message.content === 'ping') {
        message.reply('pong');
-       client.user.setStatus('idle')
+       client.user.setStatus('dnd')
     }
 
 });
