@@ -28,7 +28,7 @@ client.on('message', message => {
     if (message.content === 'yes') {
        message.reply('no');
        // Set the client user's presence
-       client.user.setActivity('Re-imagined Networks', { type: 'STREAMING' })
+       client.user.setActivity('Re-Imagined Networks', { type: 'STREAMING' })
   .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
   .catch(console.error);
     }
