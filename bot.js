@@ -23,9 +23,8 @@ client.on('message', message => {
 
     if (message.content === 'ping') {
        message.reply('pong');
-     client.user.setActivity("nou", {type: 'WATCHING'});
-       console.log('yes!');
-       }
+       client.user.setStatus('idle')
+    }
 
 });
 
