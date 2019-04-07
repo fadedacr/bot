@@ -25,6 +25,13 @@ client.on('message', message => {
        message.reply('pong');
        client.user.setStatus('dnd')
     }
+    if (message.content === 'yes') {
+       message.reply('no');
+       // Set the client user's presence
+       client.user.setPresence({ game: { name: 'with discord.js' }, status: 'idle' })
+       .then(console.log)
+       .catch(console.error);
+    }
 
 });
 
