@@ -49,7 +49,8 @@ client.on('message', message => {
        console.log("hi");
        Gamedig.query({
        type: 'garrysmod',
-       host: '45.76.63.38:27015'
+       host: '45.76.63.38',
+       port: '27015'
        }).then((state) => {
        console.log(state);
        }).catch((error) => {
