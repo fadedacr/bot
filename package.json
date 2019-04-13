@@ -20,7 +20,7 @@
 
     "request": "2.81.0",
     
-    "request-promise": "4.2.4",
+    "gamedig": "2.0.12",
     
     "cheerio": "0.22.0"
 
