@@ -1,8 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const request = require('request');
-const rp = require('request-promise');
+//const rp = require('request-promise');
 const cheerio = require('cheerio');
+const Gamedig = require('gamedig');
 
 client.on('ready', () => {
 
@@ -46,24 +47,14 @@ client.on('message', message => {
        });
        */
        console.log("hi");
-      request('https://www.gametracker.com/server_info/45.76.63.38:27015', (error, response, html) => {
-          console.log("hi2");
-          console.log(response.StatusCode)
-      if (!error && response.statusCode == 200) {
-          console.log("hi3");
-        const $ = cheerio.load(html);
-
-        $('.post-preview').each((i, el) => {
-          const playersabc = $('.block630_content_right');
-          console.log(playersabc.html());
-
-          // Write Row To CSV
-         // writeStream.write(`${title}, ${link}, ${date} \n`);
-        });
-
-        console.log('Scraping Done...');
-      }
-      });
+       Gamedig.query({
+       type: 'garrysmod',
+       host: '45.76.63.38:27015'
+       }).then((state) => {
+       console.log(state);
+       }).catch((error) => {
+       console.log("Server is offline");
+       });
     }
     if (message.content === 'yes') {
        message.reply('no');
