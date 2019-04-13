@@ -43,6 +43,7 @@ client.on('message', message => {
 
     if (message.content === 'ping') {
        message.reply('pong');
+      /*
        rp(options)
        .then(($) => {
        console.log($);
@@ -50,6 +51,7 @@ client.on('message', message => {
        .catch((err) => {
        console.log(err);
        });
+       */
     }
     if (message.content === 'yes') {
        message.reply('no');
