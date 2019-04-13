@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const rp = require('request-promise');
-const cheerio = require('cheerio');
-
+//const rp = require('request-promise');
+//const cheerio = require('cheerio');
+/*
 const options = {
   uri: `https://www.gametracker.com/server_info/45.76.63.38:27015/`,
   transform: function (body) {
@@ -18,7 +18,7 @@ rp(options)
     console.log(err);
   });
 
-
+*/
 client.on('ready', () => {
 
     console.log('I am ready!');
