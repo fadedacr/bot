@@ -45,13 +45,16 @@ client.on('message', message => {
        console.log(err);
        });
        */
+       console.log("hi");
       request('https://www.gametracker.com/server_info/45.76.63.38:27015', (error, response, html) => {
+          console.log("hi2");
       if (!error && response.statusCode == 200) {
+          console.log("hi3");
         const $ = cheerio.load(html);
 
         $('.post-preview').each((i, el) => {
-          const players = $('.block630_content_right');
-          console.log(players.html());
+          const playersabc = $('.block630_content_right');
+          console.log(playersabc.html());
 
           // Write Row To CSV
          // writeStream.write(`${title}, ${link}, ${date} \n`);
