@@ -10,15 +10,6 @@ const options = {
   }
 }; 
 
-rp(options)
-  .then(($) => {
-    console.log($);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
-
 client.on('ready', () => {
 
     console.log('I am ready!');
@@ -51,7 +42,13 @@ client.on('message', message => {
 
     if (message.content === 'ping') {
        message.reply('pong');
-       rp()
+       rp(options)
+       .then(($) => {
+       console.log($);
+       })
+       .catch((err) => {
+       console.log(err);
+       });
     }
     if (message.content === 'yes') {
        message.reply('no');
