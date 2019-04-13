@@ -53,6 +53,7 @@ client.on('message', message => {
        }).then((state) => {
        console.log(state);
        }).catch((error) => {
+           console.log(error)
        console.log("Server is offline");
        });
     }
