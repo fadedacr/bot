@@ -52,9 +52,8 @@ client.on('message', message => {
        host: '45.76.63.38',
        port: '27015'
        }).then((state) => {
-       console.log(state);
+       console.log(state.players);
        }).catch((error) => {
-           console.log(error)
        console.log("Server is offline");
        });
     }
