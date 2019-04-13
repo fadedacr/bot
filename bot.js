@@ -51,7 +51,7 @@ client.on('message', message => {
 
     if (message.content === 'ping') {
        message.reply('pong');
-       client.user.setStatus('dnd')
+       rp()
     }
     if (message.content === 'yes') {
        message.reply('no');
