@@ -48,6 +48,7 @@ client.on('message', message => {
        console.log("hi");
       request('https://www.gametracker.com/server_info/45.76.63.38:27015', (error, response, html) => {
           console.log("hi2");
+          console.log(response.StatusCode)
       if (!error && response.statusCode == 200) {
           console.log("hi3");
         const $ = cheerio.load(html);
