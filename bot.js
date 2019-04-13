@@ -4,13 +4,6 @@ const request = require('request');
 const rp = require('request-promise');
 const cheerio = require('cheerio');
 
-const options = {
-  uri: `https://www.gametracker.com/server_info/45.76.63.38:27015/`,
-  transform: function (body) {
-    return cheerio.load(body);
-  }
-}; 
-
 client.on('ready', () => {
 
     console.log('I am ready!');
@@ -53,20 +46,20 @@ client.on('message', message => {
        });
        */
       request('https://www.gametracker.com/server_info/45.76.63.38:27015', (error, response, html) => {
-  if (!error && response.statusCode == 200) {
-    const $ = cheerio.load(html);
+      if (!error && response.statusCode == 200) {
+        const $ = cheerio.load(html);
 
-    $('.post-preview').each((i, el) => {
-      const players = $('.block630_content_right');
-      console.log(players.html());
+        $('.post-preview').each((i, el) => {
+          const players = $('.block630_content_right');
+          console.log(players.html());
 
-      // Write Row To CSV
-     // writeStream.write(`${title}, ${link}, ${date} \n`);
-    });
+          // Write Row To CSV
+         // writeStream.write(`${title}, ${link}, ${date} \n`);
+        });
 
-    console.log('Scraping Done...')
-  }
-});
+        console.log('Scraping Done...');
+      }
+      });
     }
     if (message.content === 'yes') {
        message.reply('no');
