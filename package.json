@@ -22,7 +22,7 @@
     
     "request-promise": "4.2.4",
     
-    "cheerio": "0.22.0",
+    "cheerio": "0.22.0"
 
   }
 
