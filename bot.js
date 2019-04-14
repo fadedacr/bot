@@ -39,9 +39,9 @@ client.on('message', message => {
     // over at https://discord.js.org/#/docs/main/stable/class/RichEmbed
     const embed = new Discord.RichEmbed()
       // Set the title of the field
-      .setTitle('A slick little embed')
+      .setTitle("Re-Imagined Networks | DARKRP | $50000 START | HIRING ADMINS")
       // Set the color of the embed
-      .setColor(0xFF0000)
+      .setColor("BLUE")
       // Set the main content of the embed
       .setDescription('Hello, this is a slick embed!');
     // Send the embed to the same channel as the message
