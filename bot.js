@@ -32,20 +32,12 @@ function sendrequest(){
 }
 
 client.on('message', message => {
-  // If the message is "how to embed"
-  if (message.content === 'how to embed') {
-    // We can create embeds using the MessageEmbed constructor
-    // Read more about all that you can do with the constructor
-    // over at https://discord.js.org/#/docs/main/stable/class/RichEmbed
+  if (message.content === 'asdfasbrqw4512412qred!') {
     const embed = new Discord.RichEmbed()
-      // Set the title of the field
       .setTitle("Re-Imagined Networks | DARKRP | $50000 START | HIRING ADMINS")
-      // Set the color of the embed
       .setColor("BLUE")
       .setThumbnail("https://files.gamebanana.com/img/ss/maps/55ec8835dbbb3.jpg")
-      // Set the main content of the embed
-      .setDescription("Hello, this is a slick embed!");
-    // Send the embed to the same channel as the message
+      .setDescription("Server is online");
     message.channel.send(embed);
   }
 });
