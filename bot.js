@@ -34,6 +34,13 @@ function sendrequest(){
     onlineplayers = "SERVER OFFLINE"
     });
 }
+
+client.on('guildMemberAdd', member => {
+  member.addRole("561027558423003137")
+  .then(console.log)
+  .catch(console.error);
+});
+
 /*
 client.on('message', message => {
   if (message.content === 'asdfasbrqw4512412qred!') {
