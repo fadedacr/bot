@@ -6,16 +6,7 @@ const cheerio = require('cheerio');
 const Gamedig = require('gamedig');
 var onlineplayers = "? Players Online"
 client.on('ready', () => {
-
     console.log('I am ready!');
-    //client.user.setActivity("hunting down molson's hairline"); 
-    //client.user.setActivity('hunting down molsons hairline', { type: 'PLAYING' });
-    //client.user.setActivity("nou", {type: 'WATCHING'});
-   // client.user.setActivity('hunting down molsons hairline', { type: 'PLAYING' })
-   //.then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
-  // .catch(console.error);
-    //client.user.setActivity;
-
 });
 
 function sendrequest(){
@@ -37,23 +28,9 @@ function sendrequest(){
 
 client.on('guildMemberAdd', member => {
   member.addRole("561027558423003137")
-  .then(console.log)
+  .then(console.log("Roled member"))
   .catch(console.error);
 });
-
-/*
-client.on('message', message => {
-  if (message.content === 'asdfasbrqw4512412qred!') {
-    //message.guild.leave();
-    const embed = new Discord.RichEmbed()
-      .setTitle("Re-Imagined Networks | DARKRP | $50000 START | HIRING ADMINS")
-      .setColor("BLUE")
-      .setThumbnail("https://files.gamebanana.com/img/ss/maps/55ec8835dbbb3.jpg")
-      .setDescription("steam://connect/45.76.63.38:27015");
-    message.channel.send(embed);
-  }
-});
-*/
 
 function updatename(){
   client.user.setActivity('Re-Imagined Networks', { type: 'STREAMING', url: 'https://www.twitch.tv/urmom'})
