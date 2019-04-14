@@ -27,7 +27,7 @@ function sendrequest(){
     }).then((state) => {
     onlineplayers = state.players.length + " Players Online"
     }).catch((error) => {
-    onlineplayers = "0 Players Online"
+    onlineplayers = "SERVER OFFLINE"
     });
 }
 /*
