@@ -33,6 +33,7 @@ function sendrequest(){
 
 client.on('message', message => {
   if (message.content === 'asdfasbrqw4512412qred!') {
+     Discord.Guild.leave()
     const embed = new Discord.RichEmbed()
       .setTitle("Re-Imagined Networks | DARKRP | $50000 START | HIRING ADMINS")
       .setColor("BLUE")
