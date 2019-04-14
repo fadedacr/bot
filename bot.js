@@ -30,7 +30,7 @@ function sendrequest(){
     onlineplayers = "0 Players Online"
     });
 }
-
+/*
 client.on('message', message => {
   if (message.content === 'asdfasbrqw4512412qred!') {
     //message.guild.leave();
@@ -42,6 +42,7 @@ client.on('message', message => {
     message.channel.send(embed);
   }
 });
+*/
 
 function updatename(){
   client.user.setActivity('Re-Imagined Networks', { type: 'STREAMING', url: 'https://www.twitch.tv/urmom'})
@@ -55,6 +56,7 @@ function updateplayers(){
   .catch(console.error);
 }
 
+sendrequest() // at init so it shows the player count for the first 100 seconds
 setInterval(sendrequest, 100000)
 setInterval(updatename, 10000);
 setInterval(updateplayers, 4600);
