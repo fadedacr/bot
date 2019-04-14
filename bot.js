@@ -42,7 +42,7 @@ client.on('message', message => {
       .setTitle("Re-Imagined Networks | DARKRP | $50000 START | HIRING ADMINS")
       // Set the color of the embed
       .setColor("BLUE")
-      .thumbnail.url="https://files.gamebanana.com/img/ss/maps/55ec8835dbbb3.jpg"
+      .setThumbnail("https://files.gamebanana.com/img/ss/maps/55ec8835dbbb3.jpg")
       // Set the main content of the embed
       .setDescription("Hello, this is a slick embed!");
     // Send the embed to the same channel as the message
