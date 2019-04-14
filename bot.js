@@ -25,7 +25,11 @@ function sendrequest(){
     host: '45.76.63.38',
     port: '27015'
     }).then((state) => {
-    onlineplayers = state.players.length + " Players Online"
+        if (state.players.length == 1){
+            onlineplayers = state.players.length + " Player Online"
+        } else {
+            onlineplayers = state.players.length + " Players Online"
+        }
     }).catch((error) => {
     onlineplayers = "SERVER OFFLINE"
     });
