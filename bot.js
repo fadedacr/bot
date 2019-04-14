@@ -38,7 +38,7 @@ client.on('message', message => {
       .setTitle("Re-Imagined Networks | DARKRP | $50000 START | HIRING ADMINS")
       .setColor("BLUE")
       .setThumbnail("https://files.gamebanana.com/img/ss/maps/55ec8835dbbb3.jpg")
-      .setDescription("Server is online");
+      .setDescription("steam://connect/45.76.63.38:27015");
     message.channel.send(embed);
   }
 });
