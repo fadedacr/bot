@@ -9,6 +9,12 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
+request('https://games.roblox.com/v1/games/2253461079/servers/Public?sortOrder=Asc&limit=100', function (error, response, body) {
+  console.error('error:', error); // Print the error if one occurred
+  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+  console.log('body:', body); // Print the HTML for the Google homepage.
+});
+
 function sendrequest(){
     console.log("Sent request to server")
     Gamedig.query({
