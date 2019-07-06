@@ -13,6 +13,12 @@ request('https://games.roblox.com/v1/games/2253461079/servers/Public?sortOrder=A
   console.error('error:', error); // Print the error if one occurred
   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
   console.log('body:', body); // Print the HTML for the Google homepage.
+    $.getJSON(body, function(data) {
+                console.log("My data: " + data["playing"]);
+                $.each(data["playing"], function(idx, playing) {
+                    console.log("Prime number: " + playing);
+                });
+            });
 });
 
 function sendrequest(){
