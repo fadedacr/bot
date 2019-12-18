@@ -4,18 +4,11 @@ const request = require('request');
 //const rp = require('request-promise');
 const cheerio = require('cheerio');
 const Gamedig = require('gamedig');
-var onlineplayers = "? Players Online"
+var onlineplayers = "24/7 Life RPG"
 client.on('ready', () => {
     console.log('I am ready!');
 });
 
-request('https://games.roblox.com/v1/games/2253461079/servers/Public?sortOrder=Asc&limit=100', function (error, response, body) {
-  console.error('error:', error); // Print the error if one occurred
-  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-  console.log('body:', body); // Print the HTML for the Google homepage
-  var jsondata = body["data"]
-  console.log(jsondata["playing"])
-});
 
 function sendrequest(){
     console.log("Sent request to server")
@@ -34,14 +27,14 @@ function sendrequest(){
     });
 }
 
-client.on('guildMemberAdd', member => {
-  member.addRole("561027558423003137")
-  .then(console.log("Roled member"))
-  .catch(console.error);
-});
+//client.on('guildMemberAdd', member => {
+//  member.addRole("561027558423003137")
+//  .then(console.log("Roled member"))
+//  .catch(console.error);
+//});
 
 function updatename(){
-  client.user.setActivity('Re-Imagined Networks', { type: 'STREAMING', url: 'https://www.twitch.tv/urmom'})
+  client.user.setActivity('Defined Networks', { type: 'STREAMING', url: 'https://www.twitch.tv/urmom'})
   .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
   .catch(console.error);
 }
@@ -52,8 +45,8 @@ function updateplayers(){
   .catch(console.error);
 }
 
-sendrequest() // at init so it shows the player count for the first 100 seconds
-setInterval(sendrequest, 100000)
+//sendrequest() // at init so it shows the player count for the first 100 seconds
+//setInterval(sendrequest, 100000)
 setInterval(updatename, 10000);
 setInterval(updateplayers, 4600);
 
