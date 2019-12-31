@@ -4,7 +4,7 @@ const request = require('request');
 //const rp = require('request-promise');
 const cheerio = require('cheerio');
 const Gamedig = require('gamedig');
-var onlineplayers = "24/7 Life RPG"
+var onlineplayers = "24/7 Imperial RP"
 client.on('ready', () => {
     console.log('I am ready!');
 });
@@ -14,7 +14,7 @@ function sendrequest(){
     console.log("Sent request to server")
     Gamedig.query({
     type: 'garrysmod',
-    host: '45.76.63.38',
+    host: '149.28.230.23',
     port: '27015'
     }).then((state) => {
         if (state.players.length == 1){
@@ -34,7 +34,7 @@ function sendrequest(){
 //});
 
 function updatename(){
-  client.user.setActivity('Defined Networks', { type: 'STREAMING', url: 'https://www.twitch.tv/urmom'})
+  client.user.setActivity('24/7 Imperial RP', { type: 'STREAMING', url: 'https://www.twitch.tv/urmom'})
   .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
   .catch(console.error);
 }
@@ -45,8 +45,8 @@ function updateplayers(){
   .catch(console.error);
 }
 
-//sendrequest() // at init so it shows the player count for the first 100 seconds
-//setInterval(sendrequest, 100000)
+sendrequest() // at init so it shows the player count for the first 100 seconds
+setInterval(sendrequest, 100000)
 setInterval(updatename, 10000);
 setInterval(updateplayers, 4600);
 
