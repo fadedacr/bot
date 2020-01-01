@@ -45,26 +45,21 @@ function updateplayers(){
   .catch(console.error);
 }
 
-client.on('message', message => {
-    // If the message is '!rip'
-    if (message.content === '!rip') {
-        message.channel.send("hi");
-    }
-});
-
 function editmessage(){
-    message.channel.fetchMessages({around: msgId, limit: 1})
+    message.channel.fetchMessages({around: 662015148671631381, limit: 1})
     .then(msg => {
         const fetchedMsg = msg.first();
-        fetchedMsg.edit(embed);
-    });
-    
-    message.channel.fetchMessages({around: msgId, limit: 1})
-    .then(msg => {
-        const fetchedMsg = msg.first();
-        fetchedMsg.edit(embed);
+        fetchedMsg.edit("test");
     });
 }
+
+client.on('message', message => {
+    // If the message is '!rip'
+    if (message.content === '!rips') {
+        editmessage()
+        //message.channel.send("hi");
+    }
+});
 
 sendrequest() // at init so it shows the player count for the first 100 seconds
 setInterval(sendrequest, 100000)
