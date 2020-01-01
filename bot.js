@@ -45,6 +45,19 @@ function updateplayers(){
   .catch(console.error);
 }
 
+function generatemsg(){
+    client.channels.get(662008604563472416).send("original");
+}
+
+function editmessage(){
+    message.channel.fetchMessages({around: msgId, limit: 1})
+    .then(msg => {
+        const fetchedMsg = msg.first();
+        fetchedMsg.edit(embed);
+    });
+}
+
+generatemsg()
 sendrequest() // at init so it shows the player count for the first 100 seconds
 setInterval(sendrequest, 100000)
 setInterval(updatename, 10000);
