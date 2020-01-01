@@ -46,7 +46,7 @@ function updateplayers(){
 }
 
 function generatemsg(){
-    client.channels.get(662008604563472416).send("original");
+    client.channels.get('662008604563472416').send('original');
 }
 
 function editmessage(){
