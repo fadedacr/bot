@@ -45,10 +45,6 @@ function updateplayers(){
   .catch(console.error);
 }
 
-function generatemsg(){
-    client.channels.get('662008604563472416').send('original');
-}
-
 function editmessage(){
     message.channel.fetchMessages({around: msgId, limit: 1})
     .then(msg => {
@@ -57,10 +53,15 @@ function editmessage(){
     });
 }
 
-generatemsg()
 sendrequest() // at init so it shows the player count for the first 100 seconds
 setInterval(sendrequest, 100000)
 setInterval(updatename, 10000);
 setInterval(updateplayers, 4600);
 
 client.login(process.env.BOT_NEW);
+
+function generatemsg(){
+    client.channels.get('662008604563472416').send('original');
+}
+
+generatemsg()
