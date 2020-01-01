@@ -45,7 +45,20 @@ function updateplayers(){
   .catch(console.error);
 }
 
+client.on('message', message => {
+    // If the message is '!rip'
+    if (message.content === '!rip') {
+        message.channel.send("hi");
+    }
+});
+
 function editmessage(){
+    message.channel.fetchMessages({around: msgId, limit: 1})
+    .then(msg => {
+        const fetchedMsg = msg.first();
+        fetchedMsg.edit(embed);
+    });
+    
     message.channel.fetchMessages({around: msgId, limit: 1})
     .then(msg => {
         const fetchedMsg = msg.first();
@@ -59,9 +72,3 @@ setInterval(updatename, 10000);
 setInterval(updateplayers, 4600);
 
 client.login(process.env.BOT_NEW);
-
-function generatemsg(){
-    client.channels.get('662008604563472416').send('original');
-}
-
-generatemsg()
