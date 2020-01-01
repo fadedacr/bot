@@ -46,7 +46,7 @@ function updateplayers(){
 }
 
 function editmessage(){
-    message.channel.fetchMessages({around: 662015148671631381, limit: 1})
+    message.channel.fetchMessages({around: '662015148671631381', limit: 1})
     .then(msg => {
         const fetchedMsg = msg.first();
         fetchedMsg.edit("test");
