@@ -14,7 +14,7 @@ function sendrequest(){
     console.log("Sent request to server")
     Gamedig.query({
     type: 'garrysmod',
-    host: '149.28.230.23',
+    host: '96.30.193.219',
     port: '27015'
     }).then((state) => {
         if (state.players.length == 1){
@@ -56,7 +56,7 @@ function editmessage(){
 client.on('message', message => {
     // If the message is '!rip'
     if (message.content === '!rips') {
-        editmessage()
+        //editmessage()
         //message.channel.send("hi");
     }
 });
