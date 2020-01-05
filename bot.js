@@ -57,7 +57,7 @@ function sendmessage(){
 	console.log("Sending message1");
     var guild = client.guilds.get('581921321446014987');
 	console.log("Sending message2");
-    if(guild && guild.channels.get('663172964858069022')){
+    if(guild){
 	    console.log("Sending message3");
         const exampleEmbed = new Discord.RichEmbed()
 	    .setColor('#0099ff')
