@@ -57,7 +57,7 @@ function sendmessage(){
 	console.log("Sending message1");
     var guild = client.guilds.get('581921321446014987');
 	console.log("Sending message2");
-    if(guild){
+    if(guild && guild.channels.get('663172964858069022')){
 	    console.log("Sending message3");
         const exampleEmbed = new Discord.RichEmbed()
 	    .setColor('#0099ff')
@@ -73,7 +73,7 @@ function sendmessage(){
 	    .setTimestamp()
 	    .setFooter('Please DM a developer if this bot breaks', 'https://justatestasdasd.000webhostapp.com/menu/config/uploads/icons/icon.png');
 	    console.log("Sending message4");
-        guild.channels.get('663172964858069022').send(exampleEmbed);
+        guild.channels.get('663172964858069022').send("test");
 	    console.log("Sending message5");
     }
 
