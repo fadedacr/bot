@@ -54,11 +54,11 @@ function updateplayers(){
 }
 
 function sendmessage(){
-	console.log("Sending message1")
+	console.log("Sending message1");
     var guild = client.guilds.get('581921321446014987');
-	console.log("Sending message2")
+	console.log("Sending message2");
     if(guild && guild.channels.get('663172964858069022')){
-	    console.log("Sending message3")
+	    console.log("Sending message3");
         const exampleEmbed = new Discord.RichEmbed()
 	    .setColor('#0099ff')
 	    .setTitle('[NEW!] Imperial RP - Hiring COs - Defined Network')
@@ -72,9 +72,9 @@ function sendmessage(){
 	    //.setImage('https://i.imgur.com/wSTFkRM.png')
 	    .setTimestamp()
 	    .setFooter('Please DM a developer if this bot breaks', 'https://justatestasdasd.000webhostapp.com/menu/config/uploads/icons/icon.png');
-	    console.log("Sending message4")
+	    console.log("Sending message4");
         guild.channels.get('663172964858069022').send(exampleEmbed);
-	    console.log("Sending message5")
+	    console.log("Sending message5");
     }
 
 }
