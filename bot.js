@@ -73,7 +73,7 @@ function sendmessage(){
 	    .setTimestamp()
 	    .setFooter('Please DM a developer if this bot breaks', 'https://justatestasdasd.000webhostapp.com/menu/config/uploads/icons/icon.png');
 	    console.log("Sending message4");
-        guild.channels.get('663172964858069022').send("‎", { exampleEmbed });
+        guild.channels.get('663172964858069022').send(exampleEmbed);
 	    console.log("Sending message5");
     }
 
@@ -97,7 +97,7 @@ client.on('message', message => {
 
 sendmessage();
 sendrequest(); // at init so it shows the player count for the first 100 seconds
-//setInterval(sendmessage, 30000);
+setInterval(sendmessage, 30000);
 setInterval(sendrequest, 100000);
 setInterval(updatename, 10000);
 setInterval(updateplayers, 4600);
