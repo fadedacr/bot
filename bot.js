@@ -54,27 +54,23 @@ function updateplayers(){
 }
 
 function sendmessage(){
-	console.log("Sending message1");
     var guild = client.guilds.get('581921321446014987');
-	console.log("Sending message2");
     if(guild && guild.channels.get('663172964858069022')){
-	    console.log("Sending message3");
         const exampleEmbed = new Discord.RichEmbed()
 	    .setColor('#0099ff')
-	    .setTitle('[NEW!] Imperial RP - Hiring COs - Defined Network')
+	    .setTitle('Imperial RP│WiltOS│Need COs/GMs│Defined Network')
 	    //.setURL('steam://connect/96.30.193.219:27015')
 	    //.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
 	    .setDescription("Defined Networks is a premier Imperial RP server located on Garry's Mod. We strive to provide the best experience to our players and hope you enjoy our server as much as we do making it!")
 	    .setThumbnail('https://justatestasdasd.000webhostapp.com/menu/servericon.png')
-	    .addField('Server IP Address', '96.30.193.219:27015')
+	    .addField('Server Direct Connect', 'steam://connect/96.30.193.219:27015')
 	    .addField('Current Server Status', onlineplayers)
 	    .addField('Current Map', map)
 	    //.setImage('https://i.imgur.com/wSTFkRM.png')
 	    .setTimestamp()
 	    .setFooter('Please DM a developer if this bot breaks', 'https://justatestasdasd.000webhostapp.com/menu/config/uploads/icons/icon.png');
-	    console.log("Sending message4");
         guild.channels.get('663172964858069022').send(exampleEmbed);
-	    console.log("Sending message5");
+	    console.log("Sending server status message");
     }
 
 }
