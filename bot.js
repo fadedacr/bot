@@ -19,7 +19,7 @@ function sendrequest(){
     console.log("Sent request to server")
     Gamedig.query({
     type: 'garrysmod',
-    host: '96.30.193.219',
+    host: '144.202.49.19',
     port: '27015'
     }).then((state) => {
         if (state.players.length == 1){
@@ -63,7 +63,7 @@ function sendmessage(){
 	    //.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
 	    .setDescription("Defined Networks is a premier Imperial RP server located on Garry's Mod. We strive to provide the best experience to our players and hope you enjoy our server as much as we do making it!")
 	    .setThumbnail('https://justatestasdasd.000webhostapp.com/menu/servericon.png')
-	    .addField('Server Direct Connect', 'steam://connect/96.30.193.219:27015')
+	    .addField('Server Direct Connect', 'steam://connect/144.202.49.19:27015')
 	    .addField('Current Server Status', onlineplayers)
 	    .addField('Current Map', map)
 	    //.setImage('https://i.imgur.com/wSTFkRM.png')
