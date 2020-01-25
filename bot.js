@@ -5,7 +5,9 @@ const request = require('request');
 const cheerio = require('cheerio');
 const Gamedig = require('gamedig');
 var onlineplayers = "24/7 Imperial RP"
+var darkrponlineplayers = "24/7 Imperial RP"
 var map = "N/A"
+var darkrpmap = "N/A"
 client.on('ready', () => {
     console.log('I am ready!');
 });
@@ -35,6 +37,26 @@ function sendrequest(){
     });
 }
 
+function sendrequestdarkrp(){
+    console.log("Sent request to DarkRP server")
+    Gamedig.query({
+    type: 'garrysmod',
+    host: '66.42.117.162',
+    port: '27015'
+    }).then((state) => {
+        if (state.players.length == 1){
+            darkrponlineplayers = state.players.length + " Player Online"
+	    darkrpmap = state.map
+        } else {
+            darkrponlineplayers = state.players.length + " Players Online"
+	    darkrpmap = state.map
+        }
+    }).catch((error) => {
+    darkrponlineplayers = "SERVER OFFLINE"
+	darkrpmap = "N/A"
+    });
+}
+
 //client.on('guildMemberAdd', member => {
 //  member.addRole("561027558423003137")
 //  .then(console.log("Roled member"))
@@ -58,14 +80,14 @@ function sendmessage(){
     if(guild && guild.channels.get('663172964858069022')){
         const exampleEmbed = new Discord.RichEmbed()
 	    .setColor('#0099ff')
-	    .setTitle('Imperial RP│WiltOS│Need COs/GMs│Defined Network')
+	    .setTitle('Defined Networks Server Status')
 	    //.setURL('steam://connect/96.30.193.219:27015')
 	    //.setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
-	    .setDescription("Defined Networks is a premier Imperial RP server located on Garry's Mod. We strive to provide the best experience to our players and hope you enjoy our server as much as we do making it!")
+	    .setDescription("This displays the current server status of all of our Garry's Mod servers.")
 	    .setThumbnail('https://justatestasdasd.000webhostapp.com/menu/servericon.png')
-	    .addField('Server Direct Connect', 'steam://connect/144.202.49.19:27015')
-	    .addField('Current Server Status', onlineplayers)
-	    .addField('Current Map', map)
+	    //.addField('Server Direct Connect', 'steam://connect/144.202.49.19:27015')
+	    .addField('ImperialRP Server Status', onlineplayers)
+	    .addField('DarkRP Server Status', darkrponlineplayers)
 	    //.setImage('https://i.imgur.com/wSTFkRM.png')
 	    .setTimestamp()
 	    .setFooter('Please DM a developer if this bot breaks', 'https://justatestasdasd.000webhostapp.com/menu/config/uploads/icons/icon.png');
