@@ -111,8 +111,7 @@ client.on('messageReactionAdd', (reaction, user) => {
 		console.log("guild");
   		if (reaction.message.channel.id === '417421748552728589') {
 			console.log("channel");
-			console.log(reaction.emoji.name);
-    			if (reaction.emoji.name === ":ok:") {
+    			if (reaction.emoji.name === "🆗") {
 				console.log("adding role");
       				const guildMember = reaction.message.guild.members.get(user.id);
       				const role = reaction.message.guild.roles.get('671533162970611722');
