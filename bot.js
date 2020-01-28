@@ -106,8 +106,9 @@ function editmessage(){
 }
 
 client.on('messageReactionAdd', (reaction, user) => {
-	if (message.guild === '417421748552728587') {
-  		if (message.channel.id === '417421748552728589') {
+	console.log("detected reaction addition");
+	if (reaction.message.guild === '417421748552728587') {
+  		if (reaction.message.channel.id === '417421748552728589') {
     			if (reaction.emoji.name === "reminder_ribbon") {
 				console.log("adding role");
       				const guildMember = reaction.message.guild.members.get(user.id);
