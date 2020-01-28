@@ -109,7 +109,7 @@ client.on('messageReactionAdd', (reaction, user) => {
 	console.log("detected reaction addition");
 	if (reaction.message.guild === '417421748552728587') {
 		console.log("guild");
-  		if (reaction.message.channel.id === '417421748552728589') {
+  		if (reaction.message.channel === '417421748552728589') {
 			console.log("channel");
     			if (reaction.emoji.name === "reminder_ribbon") {
 				console.log("adding role");
