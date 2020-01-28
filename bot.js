@@ -105,6 +105,20 @@ function editmessage(){
     });
 }
 
+client.on('messageReactionAdd', (reaction, user) => {
+	if (message.guild === '417421748552728587') {
+  		if (message.channel.id === '417421748552728589') {
+    			if (reaction.emoji.name === "reminder_ribbon") {
+				console.log("adding role");
+      				const guildMember = reaction.message.guild.members.get(user.id);
+      				const role = reaction.message.guild.roles.get('671533162970611722');
+      				guildMember.addRole(role);
+				console.log("added role");
+   			}
+  		}
+	}
+});
+
 client.on('message', message => {
     // If the message is '!rip'
     if (message.content === '!rips') {
