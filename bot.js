@@ -120,14 +120,6 @@ client.on('messageReactionAdd', (reaction, user) => {
 	}
 });
 
-client.on('message', message => {
-    // If the message is '!rip'
-    if (message.content === '!rips') {
-        //editmessage()
-        //message.channel.send("hi");
-    }
-});
-
 sendrequest(); // at init so it shows the player count for the first 100 seconds
 sendrequestdarkrp();
 setInterval(sendmessage, 300000);
