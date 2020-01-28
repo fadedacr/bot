@@ -107,14 +107,14 @@ function editmessage(){
 
 client.on('messageReactionAdd', (reaction, user) => {
 	console.log("detected reaction addition");
-	if (reaction.message.guild.id === '417421748552728587') {
+	if (reaction.message.guild.id === '581921321446014987') {
 		console.log("guild");
-  		if (reaction.message.channel.id === '417421748552728589') {
+  		if (reaction.message.channel.id === '669982627654008843') {
 			console.log("channel");
     			if (reaction.emoji.name === "🆗") {
 				console.log("adding role");
       				const guildMember = reaction.message.guild.members.get(user.id);
-      				const role = reaction.message.guild.roles.get('671533162970611722');
+      				const role = reaction.message.guild.roles.get('671532422009061407');
       				guildMember.addRole(role);
 				console.log("added role");
    			}
