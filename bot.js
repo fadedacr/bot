@@ -107,7 +107,7 @@ function editmessage(){
 
 client.on('messageReactionAdd', (reaction, user) => {
 	console.log("detected reaction addition");
-	if (reaction.message.guild === '417421748552728587') {
+	if (reaction.message.guild.get('417421748552728587')) {
 		console.log("guild");
   		if (reaction.message.channel === '417421748552728589') {
 			console.log("channel");
