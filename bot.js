@@ -107,17 +107,17 @@ function editmessage(){
 
 client.on('messageReactionAdd', (reaction, user) => {
 	console.log("detected reaction addition");
-	if (reaction.message.guild === '417421748552728587') {
-  		if (reaction.message.channel.id === '417421748552728589') {
-    			if (reaction.emoji.name === "reminder_ribbon") {
-				console.log("adding role");
-      				const guildMember = reaction.message.guild.members.get(user.id);
-      				const role = reaction.message.guild.roles.get('671533162970611722');
-      				guildMember.addRole(role);
-				console.log("added role");
-   			}
-  		}
-	}
+	//if (reaction.message.guild === '417421748552728587') {
+  		//if (reaction.message.channel.id === '417421748552728589') {
+    		//	if (reaction.emoji.name === "reminder_ribbon") {
+		//		console.log("adding role");
+      	//	//		const guildMember = reaction.message.guild.members.get(user.id);
+      	//			const role = reaction.message.guild.roles.get('671533162970611722');
+      		//		guildMember.addRole(role);
+		//		console.log("added role");
+   		//	}
+  	//	}
+	//}
 });
 
 sendrequest(); // at init so it shows the player count for the first 100 seconds
