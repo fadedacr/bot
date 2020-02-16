@@ -122,6 +122,12 @@ function editmessage(){
 //	}
 //});
 
+client.on('message', message => {
+  if (message.content === '!connect') {
+    message.channel.send('steam://connect/45.35.193.204:27015');
+  }
+});
+
 sendrequest(); // at init so it shows the player count for the first 100 seconds
 //sendrequestdarkrp();
 //setInterval(sendmessage, 300000);
