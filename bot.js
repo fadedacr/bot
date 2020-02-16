@@ -104,23 +104,23 @@ function editmessage(){
         fetchedMsg.edit("test");
     });
 }
-
-client.on('messageReactionAdd', (reaction, user) => {
-	console.log("detected reaction addition");
-	if (reaction.message.guild.id === '581921321446014987') {
-		console.log("guild");
-  		if (reaction.message.channel.id === '669982627654008843') {
-			console.log("channel");
-    			if (reaction.emoji.name === "🆗") {
-				console.log("adding role");
-      				const guildMember = reaction.message.guild.members.get(user.id);
-      				const role = reaction.message.guild.roles.get('671532422009061407');
-      				guildMember.addRole(role);
-				console.log("added role");
-   			}
-  		}
-	}
-});
+//
+//client.on('messageReactionAdd', (reaction, user) => {
+//	console.log("detected reaction addition");
+//	if (reaction.message.guild.id === '581921321446014987') {
+//		console.log("guild");
+ // 		if (reaction.message.channel.id === '669982627654008843') {
+//			console.log("channel");
+//    			if (reaction.emoji.name === "🆗") {
+//				console.log("adding role");
+//      				const guildMember = reaction.message.guild.members.get(user.id);
+//      				const role = reaction.message.guild.roles.get('671532422009061407');
+ //     				guildMember.addRole(role);
+//				console.log("added role");
+ //  			}
+//  		}
+//	}
+//});
 
 sendrequest(); // at init so it shows the player count for the first 100 seconds
 //sendrequestdarkrp();
