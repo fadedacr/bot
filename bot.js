@@ -21,7 +21,7 @@ function sendrequest(){
     console.log("Sent request to server")
     Gamedig.query({
     type: 'garrysmod',
-    host: '144.202.49.19',
+    host: '45.35.193.204',
     port: '27015'
     }).then((state) => {
         if (state.players.length == 1){
@@ -123,10 +123,10 @@ client.on('messageReactionAdd', (reaction, user) => {
 });
 
 sendrequest(); // at init so it shows the player count for the first 100 seconds
-sendrequestdarkrp();
-setInterval(sendmessage, 300000);
+//sendrequestdarkrp();
+//setInterval(sendmessage, 300000);
 setInterval(sendrequest, 100000);
-setInterval(sendrequestdarkrp, 100000);
+//setInterval(sendrequestdarkrp, 100000);
 setInterval(updatename, 10000);
 setInterval(updateplayers, 4600);
 
