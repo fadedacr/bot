@@ -124,7 +124,7 @@ function editmessage(){
 
 client.on('message', message => {
   if (message.content === '!connect') {
-    message.channel.send('steam://connect/45.35.193.204:27015 ' + ${message.author.toString()});
+    message.channel.send('${message.author} steam://connect/45.35.193.204:27015');
   }
 });
 
